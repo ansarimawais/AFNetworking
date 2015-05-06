@@ -54,7 +54,7 @@
  */
 @interface AFHTTPResponseSerializer : NSObject <AFURLResponseSerialization>
 
-- (instancetype) init;
+- (instancetype) init NS_DESIGNATED_INITIALIZER;
 
 /**
  The string encoding used to serialize data received from the server, when no string encoding is specified by the response. `NSUTF8StringEncoding` by default.
@@ -113,7 +113,7 @@
  */
 @interface AFJSONResponseSerializer : AFHTTPResponseSerializer
 
-- (instancetype) init;
+- (instancetype) init NS_DESIGNATED_INITIALIZER;
 
 /**
  Options for reading the response JSON data and creating the Foundation objects. For possible values, see the `NSJSONSerialization` documentation section "NSJSONReadingOptions". `0` by default.
@@ -191,7 +191,7 @@
  */
 @interface AFPropertyListResponseSerializer : AFHTTPResponseSerializer
 
-- (instancetype) init;
+- (instancetype) init NS_DESIGNATED_INITIALIZER;
 
 /**
  The property list format. Possible values are described in "NSPropertyListFormat".
